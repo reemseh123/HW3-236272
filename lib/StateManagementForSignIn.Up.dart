@@ -37,10 +37,14 @@ class StateManagement with ChangeNotifier {
     try {
       _status = Status.authenticating;
       notifyListeners();
+      _email = email;
+      _password = password;
       return await _auth.createUserWithEmailAndPassword(
           email: email, password: password);
     } catch (e) {
       _status = Status.unAuthenticated;
+      _email = '';
+      _password = '';
       notifyListeners();
       return null;
     }
