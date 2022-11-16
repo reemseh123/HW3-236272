@@ -511,7 +511,7 @@ class Grabbing extends StatelessWidget {
                     alignment: Alignment.topLeft,
                     padding: const EdgeInsets.all(10),
                     child:  Row( children :  <Widget> [Text(" Welcome back, ${firebaseUser.email}",
-                      style: const TextStyle(fontSize: 18.0),
+                      style: const TextStyle(fontSize: 16.0),
                       // textAlign: TextAlign.center,
                     ),
                       Expanded(
